@@ -1,17 +1,30 @@
 import pytest
+import random
 
 import my_package.brownie as brownie
 
-@pytest.mark.xfail
+
 def test_zero_brownie():
-    a = brownie.brownie(12)
-    assert False
+    res = brownie.brownie(0)
+    exp = f"0 brownie!"
+    assert res == exp
+
 
 def test_one_brownie():
-    pass
+    res = brownie.brownie(1)
+    exp = f"1 brownie!"
+    assert res == exp
+
 
 def test_more_brownies():
-    pass
+    number = random.randint(2, 1000)
+    res = brownie.brownie(number)
+    exp = f"{str(number)} brownies!"
+    assert res == exp
+
 
 def test_negative_brownies():
-    pass
+    pytest.xfail("TODO")
+
+def test_non_int_brownies():
+    pytest.xfail("TODO")
