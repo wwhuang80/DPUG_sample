@@ -1,0 +1,5 @@
+black~=22.10
+numpy~=1.2
+pandas~=1.5
+pytest~=7.2
+tox~=3.27
