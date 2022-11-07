@@ -1,9 +1,10 @@
-def brownie(number: int):
+def brownie(number: int) -> str:
     """
-
-    :param number:
+    Brownie returner.
+    :param number: The number of brownies to return.
     :return:
     """
+
     if not isinstance(number, int):
         raise TypeError(f"The number input must be an integer.")
     elif number < 0:
@@ -12,3 +13,7 @@ def brownie(number: int):
         )
     suffix = "s" if number > 1 else ""
     return f"{str(number)} brownie{suffix}!"
+    
+
+    
+    
